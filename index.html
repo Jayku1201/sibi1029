@@ -1,8 +1,34 @@
 <!DOCTYPE html>
 <html lang="zh-Hant"><head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>SIBI Strategic Advisory - Variant 1</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <title>SiBi｜方法論驅動的資產配置顧問</title>
+
+        <!-- SEO meta -->
+        <meta name="description" content="SiBi 以紀律與方法論，協助企業與家庭建立長期、可持續的資產配置與風險控管流程。"/>
+        <!-- Canonical URL: GitHub Pages URL without fragment identifiers for better indexing -->
+        <link rel="canonical" href="https://jayku1201.github.io/sibi1029/"/>
+        <!-- Open Graph tags -->
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="SiBi｜方法論驅動的資產配置顧問"/>
+        <meta property="og:description" content="紀律、風險、再平衡：讓長期投資可執行。"/>
+        <meta property="og:url" content="https://jayku1201.github.io/sibi1029/"/>
+        <!-- Twitter Card tags -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:title" content="SiBi｜方法論驅動的資產配置顧問"/>
+        <meta name="twitter:description" content="紀律、風險、再平衡：讓長期投資可執行。"/>
+
+        <!-- Structured Data: Organization -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "SiBi",
+          "url": "https://jayku1201.github.io/sibi1029/",
+          "logo": "https://jayku1201.github.io/sibi1029/assets/logo.png",
+          "sameAs": []
+        }
+        </script>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -18,7 +44,13 @@
           'opsz' 24
         }
     </style>
-<script id="tailwind-config">
+    <!-- Ensure fonts do not block rendering -->
+    <style>
+      @font-face {
+        font-display: swap;
+      }
+    </style>
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -44,7 +76,9 @@
     </script>
 </head>
 <body class="bg-background-light font-display text-text-dark">
-<div class="relative flex min-h-screen w-full flex-col">
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main" class="absolute left-[-1000px] top-0 z-50 focus:left-4 bg-accent text-white px-4 py-2 rounded transition-transform">跳到主要內容</a>
+    <div class="relative flex min-h-screen w-full flex-col">
 <header class="sticky top-0 z-50 bg-background-light/80 backdrop-blur-sm transition-shadow duration-300">
 <div class="container mx-auto max-w-6xl px-4">
 <div class="flex h-20 items-center justify-between">
@@ -56,30 +90,27 @@
 </div>
 <h2 class="text-xl font-bold tracking-tight text-primary">希比策略顧問</h2>
 </div>
-<nav class="hidden items-center gap-8 md:flex">
-<a class="text-sm font-medium text-text-dark transition-colors hover:text-accent" href="#pain-points">成長痛點</a>
-<a class="text-sm font-medium text-text-dark transition-colors hover:text-accent" href="#services">核心服務</a>
-<a class="text-sm font-medium text-text-dark transition-colors hover:text-accent" href="#methodology">方法論</a>
-<a class="text-sm font-medium text-text-dark transition-colors hover:text-accent" href="#about">關於希比</a>
-<a class="text-sm font-medium text-text-dark transition-colors hover:text-accent" href="#contact">預約諮詢</a>
-</nav>
+        <nav class="hidden items-center gap-8 md:flex" aria-label="主選單">
+            <a class="text-sm font-medium text-text-dark transition-colors hover:text-accent" href="#methodology">方法論</a>
+            <a class="text-sm font-medium bg-accent text-white rounded px-4 py-2 hover:bg-accent/80" href="#contact">聯絡我們</a>
+        </nav>
 </div>
 </div>
 </header>
-<main class="flex-grow">
+<main id="main" class="flex-grow">
 <section class="relative flex min-h-[calc(100vh-80px)] items-center justify-center overflow-hidden py-20 md:py-32">
 <div class="absolute inset-0 z-0 opacity-10">
 <svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg"><defs><pattern height="80" id="a" patternTransform="scale(1) rotate(0)" patternUnits="userSpaceOnUse" width="80"><rect fill="hsla(0,0%,100%,1)" height="100%" width="100%" x="0" y="0"></rect><path d="M40 4V44M4 24H76" stroke="#1A365D" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></pattern></defs><rect fill="url(#a)" height="800%" transform="translate(0,0)" width="800%"></rect></svg>
 </div>
 <div class="container relative z-10 mx-auto max-w-6xl px-4 text-center">
-<div class="flex flex-col items-center gap-6">
-<h1 class="text-4xl font-extrabold leading-tight tracking-tighter text-primary md:text-6xl lg:text-7xl">建立深度．穩健成長</h1>
-<h2 class="max-w-3xl text-lg font-normal text-text-dark/80 md:text-xl">為中小企業與新創團隊，提供從「轉型策略」到「IPO 實戰」的全方位成長方案。</h2>
-<p class="max-w-3xl text-base text-text-dark/70 md:text-lg">希比顧問專注於協助企業在數位時代中建立可持續的競爭優勢。我們結合策略、財務與科技，協助客戶從創意落地、營運優化到資本市場布局，打造長期穩健的成長曲線。</p>
-<a class="mt-4 inline-flex h-12 cursor-pointer items-center justify-center rounded-lg bg-accent px-8 text-base font-bold text-white shadow-lg transition-transform duration-200 hover:scale-105" href="#contact">
-                            預約策略診斷
-                        </a>
-</div>
+                        <div class="flex flex-col items-center gap-6" aria-labelledby="hero-title">
+                            <h1 id="hero-title" class="text-4xl font-extrabold leading-tight tracking-tighter text-primary md:text-6xl lg:text-7xl">BUILD DEPTH. GROW STEADY.</h1>
+                            <h2 class="max-w-3xl text-lg font-normal text-text-dark/80 md:text-xl">以方法論，讓長期投資可執行</h2>
+                            <p class="max-w-3xl text-base text-text-dark/70 md:text-lg">SiBi 以紀律化流程、風險控管與再平衡，為企業與家庭實作穩健的資產配置。</p>
+                            <a class="mt-4 inline-flex h-12 items-center justify-center rounded-lg bg-accent px-8 text-base font-bold text-white shadow-lg transition-transform duration-200 hover:scale-105" href="#contact">
+                                預約諮詢
+                            </a>
+                        </div>
 </div>
 </section>
 <section class="py-20 md:py-32" id="pain-points">
@@ -167,27 +198,34 @@
 </section>
 <section class="py-20 md:py-32" id="methodology">
 <div class="container mx-auto max-w-5xl px-4">
-<div class="mx-auto mb-12 max-w-3xl text-center">
-<h2 class="text-3xl font-bold tracking-tight text-primary md:text-4xl">穩健成長的三階段路徑</h2>
-</div>
-<div class="relative grid grid-cols-1 gap-8 md:grid-cols-3">
-<div class="absolute left-0 top-1/2 hidden h-0.5 w-full -translate-y-1/2 bg-accent/30 md:block"></div>
-<div class="relative flex flex-col items-center text-center">
-<div class="z-10 flex h-16 w-16 items-center justify-center rounded-full border-4 border-accent/30 bg-background-light text-2xl font-bold text-accent">1</div>
-<h3 class="mt-4 text-xl font-bold text-primary">洞察與啟動</h3>
-<p class="mt-2 text-base text-text-dark/80">以市場與數據為導向，找出企業核心優勢，制定明確的轉型藍圖。<br/><span class="text-sm text-text-dark/60">（適用：新創商模驗證／中小企業轉型健檢）</span></p>
-</div>
-<div class="relative flex flex-col items-center text-center">
-<div class="z-10 flex h-16 w-16 items-center justify-center rounded-full border-4 border-accent/30 bg-background-light text-2xl font-bold text-accent">2</div>
-<h3 class="mt-4 text-xl font-bold text-primary">建構與優化</h3>
-<p class="mt-2 text-base text-text-dark/80">搭建高效營運體系與數位化基礎，優化流程與組織協作。<br/><span class="text-sm text-text-dark/60">（適用：IPO前營運整備／SOP設計）</span></p>
-</div>
-<div class="relative flex flex-col items-center text-center">
-<div class="z-10 flex h-16 w-16 items-center justify-center rounded-full border-4 border-accent/30 bg-background-light text-2xl font-bold text-accent">3</div>
-<h3 class="mt-4 text-xl font-bold text-primary">成長與規模化</h3>
-<p class="mt-2 text-base text-text-dark/80">打造穩定獲利模式，拓展市場版圖，建立永續經營的競爭護城河。<br/><span class="text-sm text-text-dark/60">（適用：IPO後成長與新事業布局）</span></p>
-</div>
-</div>
+        <div class="mx-auto mb-12 max-w-3xl text-center">
+            <h2 class="text-3xl font-bold tracking-tight text-primary md:text-4xl">SiBi 方法論步驟</h2>
+        </div>
+        <ol class="mx-auto max-w-3xl space-y-8 text-left text-text-dark/90 md:text-lg" aria-label="SiBi 方法論步驟">
+            <li>
+                <h3 class="font-bold text-primary">1. 定義目標與約束</h3>
+                <p>明確風險承受度、現金流需求與投資時間區間。</p>
+            </li>
+            <li>
+                <h3 class="font-bold text-primary">2. 資產配置設計</h3>
+                <p>以風險預算與相關性打造核心與衛星配置。</p>
+            </li>
+            <li>
+                <h3 class="font-bold text-primary">3. 執行與費用控管</h3>
+                <p>產品篩選、成本最小化及交易紀律。</p>
+            </li>
+            <li>
+                <h3 class="font-bold text-primary">4. 監控與再平衡</h3>
+                <p>偏離閾值時觸發再平衡規則，降低行為偏誤。</p>
+            </li>
+            <li>
+                <h3 class="font-bold text-primary">5. 回顧與溝通</h3>
+                <p>以季度或年度報告追蹤目標達成度。</p>
+            </li>
+        </ol>
+        <div class="mt-8 text-center">
+            <a href="/methodology" class="inline-flex items-center text-accent hover:underline">索取方法論細節（PDF）</a>
+        </div>
 </div>
 </section>
 <section class="bg-primary py-20 text-white md:py-32" id="about">
@@ -216,56 +254,23 @@
 </div>
 </section>
 <section class="bg-white py-20 md:py-32" id="contact">
-<div class="container mx-auto max-w-6xl px-4">
-<div class="grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
-<div class="flex flex-col gap-4">
-<h2 class="text-3xl font-bold tracking-tight text-primary md:text-4xl">開啟您的穩健成長之路</h2>
-<p class="text-lg text-text-dark/80">若您正處於事業轉折點——無論是新創落地、轉型加速，或IPO前整備，希比顧問將協助您擬定具體、可執行的策略藍圖。</p>
-<p class="mt-2 text-lg text-text-dark/80">或直接預約30分鐘「初步策略診斷」會議。</p>
-</div>
-<div class="w-full">
-<form class="flex flex-col gap-4 rounded-xl border border-gray-200 bg-background-light p-8 shadow-sm">
-<div class="flex flex-col gap-1.5">
-<label class="text-sm font-medium text-text-dark" for="name">姓名</label>
-<input class="block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="name" placeholder="您的姓名" type="text"/>
-</div>
-<div class="flex flex-col gap-1.5">
-<label class="text-sm font-medium text-text-dark" for="company">公司名稱</label>
-<input class="block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="company" placeholder="您的公司名稱" type="text"/>
-</div>
-<div class="flex flex-col gap-1.5">
-<label class="text-sm font-medium text-text-dark" for="email">Email</label>
-<input class="block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="email" placeholder="you@company.com" type="email"/>
-</div>
-<div class="flex flex-col gap-1.5">
-<label class="text-sm font-medium text-text-dark" for="message">您的主要需求</label>
-<textarea class="block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="message" placeholder="簡述您的挑戰或目標" rows="4"></textarea>
-</div>
-<button class="mt-2 flex h-11 w-full cursor-pointer items-center justify-center rounded-lg bg-accent px-6 text-base font-bold text-white shadow-md transition-transform duration-200 hover:scale-105" type="submit">送出</button>
-</form>
-</div>
-</div>
-</div>
+        <div class="container mx-auto max-w-6xl px-4">
+            <div class="mx-auto max-w-2xl text-center flex flex-col gap-6">
+                <h2 class="text-3xl font-bold tracking-tight text-primary md:text-4xl">聯絡我們</h2>
+                <p class="text-lg text-text-dark/80">留下你的需求，我們會以 Email 回覆。</p>
+                <a href="mailto:hello@sibi.example" class="text-accent text-lg underline hover:text-accent/80">Email：hello@sibi.example</a>
+            </div>
+        </div>
 </section>
 </main>
-<footer class="bg-primary text-white">
-<div class="container mx-auto max-w-6xl px-4 py-8">
-<div class="flex flex-col items-center justify-between gap-4 md:flex-row">
-<div class="flex items-center gap-3">
-<div class="size-5">
-<svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill-rule="evenodd"></path>
-</svg>
-</div>
-<p class="text-sm font-medium">© 2024 希比策略顧問. All rights reserved.</p>
-</div>
-<div class="flex items-center gap-4">
-<a aria-label="LinkedIn Profile" class="text-white/70 transition-colors hover:text-white" href="#">
-<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.25 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.62 1.62 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path></svg>
-</a>
-</div>
-</div>
-</div>
-</footer>
+    <footer class="bg-primary text-white" role="contentinfo">
+        <div class="container mx-auto max-w-6xl px-4 py-8">
+            <nav class="flex flex-col items-center gap-2 md:flex-row md:gap-8" aria-label="頁腳導覽">
+                <a class="text-sm text-white hover:underline" href="#methodology">方法論</a>
+                <a class="text-sm text-white hover:underline" href="#contact">聯絡我們</a>
+            </nav>
+            <p class="mt-4 text-center text-sm text-white/70">© SiBi. 本頁資訊僅供一般性財務教育用途。</p>
+        </div>
+    </footer>
 </div>
 </body></html>

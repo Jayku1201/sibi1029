@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jayku1201.github.io/sibi1029/sitemap.xml
