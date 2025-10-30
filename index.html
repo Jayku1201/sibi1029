@@ -45,13 +45,25 @@
         darkMode: "class",
         theme: {
           extend: {
-            colors: {
-              primary: "#0A2540",
-              accent: "#C7A36D",
-              background: "#F5F7FA",
-              text: "#0A2540",
-              muted: "#5B6B7A",
-            },
+             colors: {
+               /*
+                * Custom palette to align with the SiBi brand.  
+                * primary: deep blue used for header/footer and key headings  
+                * accent: warm gold for call‑to‑action elements and highlights  
+                * background: pure white for the main page background  
+                * sectionBg: light gray used for card backgrounds and alternate sections  
+                * text: dark gray for body copy  
+                * muted: secondary text colour  
+                * border: light gray for card and element borders
+                */
+               primary: "#0A2540",
+               accent: "#C7A36D",
+               background: "#FFFFFF",
+               sectionBg: "#F5F7FA",
+               text: "#334E68",
+               muted: "#5B6B7A",
+               border: "#E5EAF0",
+             },
             fontFamily: {
               sans: ["Noto Sans TC", "Inter", "sans-serif"],
               serif: ["Noto Serif TC", "serif"],
@@ -76,11 +88,30 @@
       @media (prefers-reduced-motion: reduce) {
         * { animation-duration: 0.01ms; animation-iteration-count: 1; transition-duration: 0.01ms; }
       }
+    <
+          <style>
+      /* Brand color overrides */
+      header.sticky { background-color: #0A2540; }
+      header nav a { color: #FFFFFF; }
+      header nav a:hover { color: #C7A36D; }
+      header nav a.bg-accent { background-color: #C7A36D; color: #0A2540; }
+      header nav a.bg-accent:hover { background-color: #B48E59; }
+      footer.bg-primary { border-top: 2px solid #C7A36D; }
+      /* Growth key cards */
+      #growth-keys .rounded-card { background-color: #F5F7FA; border-color: #E5EAF0; }
+      #growth-keys .rounded-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.08); transform: translateY(-2px); transition: all 0.3s ease; }
+      /* Contact section background */
+      #contact { background-color: #F5F7FA; }
+      /* Hero gradient background */
+      #main > section.relative { background: linear-gradient(180deg, #FFFFFF 0%, #F5F7FA 100%); }
+      /* Link colors */
+      a:hover { color: #C7A36D; }
     </style>
+/style>
     <!-- Skip to main content link for accessibility -->
     <a href="#main" class="absolute left-[-1000px] top-0 z-50 focus:left-4 bg-accent text-white px-4 py-2 rounded transition-transform">跳到主要內容</a>
     <div class="relative flex min-h-screen flex-col">
-      <header role="banner" class="sticky top-0 z-50 bg-background/80 backdrop-blur-sm">
+       <header role="banner" class="sticky top-0 z-50 bg-primary text-white">
         <div class="container mx-auto max-w-[1120px] px-6">
           <div class="flex h-20 items-center justify-between">
             <div class="flex items-center gap-3">
@@ -90,15 +121,16 @@
               <h2 class="text-xl font-bold tracking-tight text-primary">希比策略顧問</h2>
             </div>
             <nav role="navigation" aria-label="主選單" class="hidden items-center gap-8 md:flex">
-              <a class="text-sm font-medium text-text transition-colors hover:text-accent" href="#about">關於我們</a>
-              <a class="text-sm font-medium rounded px-4 py-2 bg-accent text-white hover:bg-accent/80" href="#contact">聯絡我們</a>
+               <!-- Header navigation uses white text on the primary background; links turn gold on hover -->
+               <a class="text-sm font-medium text-white transition-colors hover:text-accent" href="#about">關於我們</a>
+               <a class="text-sm font-medium rounded px-4 py-2 bg-accent text-primary hover:bg-accent/80" href="#contact">聯絡我們</a>
             </nav>
           </div>
         </div>
       </header>
       <main id="main" role="main" class="flex-grow">
         <!-- Hero Section -->
-        <section class="relative flex items-center justify-center overflow-hidden py-20 md:py-32">
+         <section class="relative flex items-center justify-center overflow-hidden py-20 md:py-32" style="background: linear-gradient(180deg, #FFFFFF 0%, #F5F7FA 100%);">
           <!-- subtle grid background -->
           <div class="absolute inset-0 z-0 opacity-10">
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" patternUnits="userSpaceOnUse" width="80" height="80"><rect width="100%" height="100%" fill="white" /><path d="M40 4V44M4 24H76" stroke="#0A2540" stroke-width="2" stroke-linecap="round" /></pattern></defs><rect width="800%" height="800%" fill="url(#grid)" /></svg>
@@ -108,7 +140,7 @@
               <h1 lang="en" class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-primary">BUILD DEPTH. GROW STEADY.</h1>
               <p lang="en" class="max-w-3xl text-lg md:text-xl text-muted">Focus on your future.</p>
               <p lang="en" class="max-w-3xl text-base md:text-lg text-muted/80">A disciplined perspective for long-term growth.</p>
-              <a href="#contact" class="mt-4 inline-flex h-12 items-center justify-center rounded-lg bg-accent px-8 text-base font-bold text-white shadow-lg hover:scale-105 transition-transform">預約諮詢</a>
+               <a href="#contact" class="mt-4 inline-flex h-12 items-center justify-center rounded-lg bg-accent px-8 text-base font-bold text-primary shadow-lg hover:scale-105 transition-transform">預約諮詢</a>
             </div>
           </div>
         </section>
@@ -119,7 +151,7 @@
               <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-primary">您的企業，是否正需要關鍵資源與策略夥伴？</h2>
             </div>
             <div class="grid gap-8 md:grid-cols-3">
-              <div class="flex flex-col gap-4 rounded-card border border-gray-200 bg-white p-6 text-center shadow-sm">
+               <div class="flex flex-col gap-4 rounded-card border border-border bg-sectionBg p-6 text-center shadow-sm">
                 <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 text-accent">
                   <span class="material-symbols-outlined text-3xl">rocket_launch</span>
                 </div>
@@ -128,7 +160,7 @@
                   <p class="text-base text-muted">從概念到實踐，SiBi 協助新創建立可執行的成長藍圖。透過商業模式設計、財務預測與資源整合，讓創意穩健落地、轉化為事業價值。</p>
                 </div>
               </div>
-              <div class="flex flex-col gap-4 rounded-card border border-gray-200 bg-white p-6 text-center shadow-sm">
+               <div class="flex flex-col gap-4 rounded-card border border-border bg-sectionBg p-6 text-center shadow-sm">
                 <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 text-accent">
                   <span class="material-symbols-outlined text-3xl">cloud_sync</span>
                 </div>
@@ -137,7 +169,7 @@
                   <p class="text-base text-muted">轉型不僅是導入技術，更是思維重塑。SiBi 協助企業重新定義流程與數據架構，導入 AI、自動化與管理系統，提升效率與決策品質。</p>
                 </div>
               </div>
-              <div class="flex flex-col gap-4 rounded-card border border-gray-200 bg-white p-6 text-center shadow-sm">
+               <div class="flex flex-col gap-4 rounded-card border border-border bg-sectionBg p-6 text-center shadow-sm">
                 <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 text-accent">
                   <span class="material-symbols-outlined text-3xl">account_balance</span>
                 </div>
@@ -150,7 +182,7 @@
           </div>
         </section>
         <!-- Growth Path Sections -->
-        <section id="paths" class="overflow-hidden bg-white py-20 md:py-32">
+         <section id="paths" class="overflow-hidden bg-sectionBg py-20 md:py-32">
           <div class="container mx-auto max-w-[1120px] px-6">
             <div class="mb-12 text-center">
               <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-primary">三大成長顧問路徑，為企業打造專屬策略</h2>
@@ -164,7 +196,7 @@
                 <div class="w-full flex-1 md:w-1/2 flex flex-col justify-center gap-4">
                   <p class="text-sm font-bold uppercase tracking-wider text-accent">0 → 1</p>
                   <h3 class="text-2xl md:text-3xl font-bold tracking-tight text-primary">新創加速與落地（0→1）</h3>
-                  <p class="mt-2 text-lg leading-relaxed text-muted">從創意到實踐，是策略與執行的協奏。SiBi 協助設計商業模式、架構財務預測、整合團隊與資源，讓新創每一步皆可落地。</p>
+                   <p class="mt-2 text-lg leading-relaxed text-text">從創意到實踐，是策略與執行的協奏。SiBi 協助設計商業模式、架構財務預測、整合團隊與資源，讓新創每一步皆可落地。</p>
                 </div>
               </div>
               <!-- 1→N -->
@@ -175,7 +207,7 @@
                 <div class="w-full flex-1 md:w-1/2 flex flex-col justify-center gap-4">
                   <p class="text-sm font-bold uppercase tracking-wider text-accent">1 → N</p>
                   <h3 class="text-2xl md:text-3xl font-bold tracking-tight text-primary">中小企業數位轉型（1→N）</h3>
-                  <p class="mt-2 text-lg leading-relaxed text-muted">數位化不只是導入工具，而是重塑效率與思維。SiBi 協助檢視流程、導入 AI 與自動化系統，讓數據驅動成為營運核心。</p>
+                   <p class="mt-2 text-lg leading-relaxed text-text">數位化不只是導入工具，而是重塑效率與思維。SiBi 協助檢視流程、導入 AI 與自動化系統，讓數據驅動成為營運核心。</p>
                 </div>
               </div>
               <!-- ∞ -->
@@ -186,14 +218,14 @@
                 <div class="w-full flex-1 md:w-1/2 flex flex-col justify-center gap-4">
                   <p class="text-sm font-bold uppercase tracking-wider text-accent">∞</p>
                   <h3 class="text-2xl md:text-3xl font-bold tracking-tight text-primary">IPO 財務與營運顧問（∞）</h3>
-                  <p class="mt-2 text-lg leading-relaxed text-muted">在邁向資本市場之前，先打造被信任的營運底盤。SiBi 以公開發行標準導入財務制度、內控架構與治理流程，協助企業穩健成長。</p>
+                   <p class="mt-2 text-lg leading-relaxed text-text">在邁向資本市場之前，先打造被信任的營運底盤。SiBi 以公開發行標準導入財務制度、內控架構與治理流程，協助企業穩健成長。</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
         <!-- Brand Banner replacing methodology -->
-        <section id="brand-banner" class="py-20 md:py-32 bg-background">
+         <section id="brand-banner" class="py-20 md:py-32 bg-sectionBg">
           <div class="container mx-auto max-w-[1120px] px-6 text-center">
             <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-primary">穩健，是最聰明的加速。</h2>
             <p class="mt-4 text-lg text-muted">以研究與紀律築底，以節奏與回顧前進。</p>
@@ -226,7 +258,7 @@
           </div>
         </section>
         <!-- Contact Section -->
-        <section id="contact" class="bg-white py-20 md:py-32">
+         <section id="contact" class="bg-sectionBg py-20 md:py-32">
           <div class="container mx-auto max-w-[1120px] px-6">
             <div class="mx-auto max-w-2xl text-center flex flex-col gap-6">
               <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-primary">聯絡我們</h2>
@@ -237,7 +269,7 @@
           </div>
         </section>
       </main>
-      <footer role="contentinfo" class="bg-primary text-white">
+       <footer role="contentinfo" class="bg-primary text-white border-t-2 border-accent">
         <div class="container mx-auto max-w-[1120px] px-6 py-8">
           <nav role="navigation" aria-label="頁腳導覽" class="flex flex-col items-center gap-2 md:flex-row md:gap-8">
             <a class="text-sm text-white hover:underline" href="#about">關於我們</a>
