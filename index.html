@@ -7,12 +7,12 @@
         <!-- SEO meta -->
         <meta name="description" content="SiBi 以紀律與方法論，協助企業與家庭建立長期、可持續的資產配置與風險控管流程。"/>
         <!-- Canonical URL: GitHub Pages URL without fragment identifiers for better indexing -->
-        <link rel="canonical" href="https://jayku1201.github.io/sibi1029/"/>
+        <link rel="canonical" href="https://sibi-advisory.com/"/>
         <!-- Open Graph tags -->
         <meta property="og:type" content="website"/>
         <meta property="og:title" content="SiBi｜方法論驅動的資產配置顧問"/>
         <meta property="og:description" content="紀律、風險、再平衡：讓長期投資可執行。"/>
-        <meta property="og:url" content="https://jayku1201.github.io/sibi1029/"/>
+        <meta property="og:url" content="https://sibi-advisory.com/"/>
         <!-- Twitter Card tags -->
         <meta name="twitter:card" content="summary_large_image"/>
         <meta name="twitter:title" content="SiBi｜方法論驅動的資產配置顧問"/>
@@ -24,8 +24,8 @@
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "SiBi",
-          "url": "https://jayku1201.github.io/sibi1029/",
-          "logo": "https://jayku1201.github.io/sibi1029/assets/logo.png",
+          "url": "https://sibi-advisory.com/",
+          "logo": "https://sibi-advisory.com/assets/logo.png",
           "sameAs": []
         }
         </script>
@@ -76,10 +76,16 @@
     </script>
 </head>
 <body class="bg-background-light font-display text-text-dark">
+    <!-- Global scroll behavior and anchor offset to prevent fixed header overlap -->
+    <style>
+      html { scroll-behavior: smooth; }
+      /* Scroll margin to account for sticky header height */
+      section { scroll-margin-top: 96px; }
+    </style>
     <!-- Skip to main content link for accessibility -->
     <a href="#main" class="absolute left-[-1000px] top-0 z-50 focus:left-4 bg-accent text-white px-4 py-2 rounded transition-transform">跳到主要內容</a>
     <div class="relative flex min-h-screen w-full flex-col">
-<header class="sticky top-0 z-50 bg-background-light/80 backdrop-blur-sm transition-shadow duration-300">
+<header role="banner" class="sticky top-0 z-50 bg-background-light/80 backdrop-blur-sm transition-shadow duration-300">
 <div class="container mx-auto max-w-6xl px-4">
 <div class="flex h-20 items-center justify-between">
 <div class="flex items-center gap-3">
@@ -90,14 +96,14 @@
 </div>
 <h2 class="text-xl font-bold tracking-tight text-primary">希比策略顧問</h2>
 </div>
-        <nav class="hidden items-center gap-8 md:flex" aria-label="主選單">
+        <nav role="navigation" class="hidden items-center gap-8 md:flex" aria-label="主選單">
             <a class="text-sm font-medium text-text-dark transition-colors hover:text-accent" href="#methodology">方法論</a>
             <a class="text-sm font-medium bg-accent text-white rounded px-4 py-2 hover:bg-accent/80" href="#contact">聯絡我們</a>
         </nav>
 </div>
 </div>
 </header>
-<main id="main" class="flex-grow">
+<main id="main" role="main" class="flex-grow">
 <section class="relative flex min-h-[calc(100vh-80px)] items-center justify-center overflow-hidden py-20 md:py-32">
 <div class="absolute inset-0 z-0 opacity-10">
 <svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg"><defs><pattern height="80" id="a" patternTransform="scale(1) rotate(0)" patternUnits="userSpaceOnUse" width="80"><rect fill="hsla(0,0%,100%,1)" height="100%" width="100%" x="0" y="0"></rect><path d="M40 4V44M4 24H76" stroke="#1A365D" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></pattern></defs><rect fill="url(#a)" height="800%" transform="translate(0,0)" width="800%"></rect></svg>
@@ -224,7 +230,7 @@
             </li>
         </ol>
         <div class="mt-8 text-center">
-            <a href="/methodology" class="inline-flex items-center text-accent hover:underline">索取方法論細節（PDF）</a>
+            <a href="/methodology.html" class="inline-flex items-center text-accent hover:underline">索取方法論細節（PDF）</a>
         </div>
 </div>
 </section>
@@ -265,7 +271,7 @@
 </main>
     <footer class="bg-primary text-white" role="contentinfo">
         <div class="container mx-auto max-w-6xl px-4 py-8">
-            <nav class="flex flex-col items-center gap-2 md:flex-row md:gap-8" aria-label="頁腳導覽">
+            <nav role="navigation" class="flex flex-col items-center gap-2 md:flex-row md:gap-8" aria-label="頁腳導覽">
                 <a class="text-sm text-white hover:underline" href="#methodology">方法論</a>
                 <a class="text-sm text-white hover:underline" href="#contact">聯絡我們</a>
             </nav>
