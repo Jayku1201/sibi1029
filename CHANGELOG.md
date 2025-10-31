@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0] - 2024-04-16
+### Added
+- Dockerfile for containerized production builds.
+- GitHub Actions workflow to build and publish Docker images to GitHub Container Registry.
+- Deployment documentation with example Render blueprint and release process.
+
+### Changed
+- Bumped project version to 1.1.0 to reflect deployment automation.
 All notable changes to this project will be documented in this file.
 
 ## [v2.0.0] - 2025-10-31

@@ -1,0 +1,35 @@
+.metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.header {
+  max-width: 620px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  border-radius: 18px;
+  padding: 1.5rem;
+  background: rgba(11, 37, 69, 0.65);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.value {
+  font-size: 2rem;
+  color: var(--brand-gold);
+  font-weight: 600;
+}
+
+.label {
+  color: rgba(226, 232, 240, 0.75);
+}
