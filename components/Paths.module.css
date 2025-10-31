@@ -1,0 +1,13 @@
+.paths {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.header {
+  max-width: 640px;
+}
+
+.sectionCardContent {
+  line-height: 1.7;
+}

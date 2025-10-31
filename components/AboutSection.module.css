@@ -1,0 +1,17 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.header {
+  max-width: 740px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.description {
+  color: rgba(226, 232, 240, 0.75);
+  line-height: 1.7;
+}

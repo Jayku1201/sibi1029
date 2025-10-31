@@ -1,0 +1,39 @@
+{
+  "name": "sibi-advisory-cms",
+  "version": "1.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prisma:migrate": "prisma migrate deploy",
+    "prisma:generate": "prisma generate",
+    "prisma:seed": "ts-node prisma/seed.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "5.13.0",
+    "axios": "1.6.7",
+    "bcryptjs": "2.4.3",
+    "classnames": "2.5.1",
+    "jsonwebtoken": "9.0.2",
+    "next": "14.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "cookie": "0.6.0",
+    "marked": "9.1.5"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "2.4.2",
+    "@types/jsonwebtoken": "9.0.5",
+    "@types/node": "20.11.19",
+    "@types/react": "18.2.57",
+    "@types/react-dom": "18.2.18",
+    "eslint": "8.56.0",
+    "eslint-config-next": "14.1.0",
+    "prisma": "5.13.0",
+    "ts-node": "10.9.2",
+    "typescript": "5.3.3",
+    "@types/cookie": "0.6.0"
+  }
+}

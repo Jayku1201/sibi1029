@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+  background: rgba(11, 37, 69, 0.8);
+}
+
+.brand {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--brand-gold);
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav a {
+  color: rgba(226, 232, 240, 0.85);
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
