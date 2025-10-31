@@ -1,0 +1,42 @@
+backend:
+  name: github
+  repo: Jayku1201/sibi1029
+  branch: cms-backend
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+collections:
+  - name: "home"
+    label: "Home Page"
+    files:
+      - file: "data/home.json"
+        label: "Home Page Content"
+        name: "home"
+        fields:
+          - { name: "heroTitle", label: "Hero Title", widget: "string" }
+          - { name: "heroDescription", label: "Hero Description", widget: "string" }
+          - { name: "heroButtonText", label: "Hero Button Text", widget: "string" }
+          - { name: "heroButtonLink", label: "Hero Button Link", widget: "string" }
+          - name: "services"
+            label: "Services"
+            widget: list
+            fields:
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "description", label: "Description", widget: "string" }
+              - { name: "icon", label: "Icon Path", widget: "string" }
+          - name: "growthPaths"
+            label: "Growth Paths"
+            widget: list
+            fields:
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "description", label: "Description", widget: "string" }
+          - { name: "bannerText", label: "Banner Text", widget: "string" }
+          - { name: "bannerButtonText", label: "Banner Button Text", widget: "string" }
+          - { name: "bannerButtonLink", label: "Banner Button Link", widget: "string" }
+          - { name: "aboutTitle", label: "About Title", widget: "string" }
+          - { name: "aboutDescription", label: "About Description", widget: "string" }
+          - { name: "aboutImage", label: "About Image", widget: "image" }
+          - { name: "contactTitle", label: "Contact Title", widget: "string" }
+          - { name: "contactSubtitle", label: "Contact Subtitle", widget: "string" }
+          - { name: "contactAddress", label: "Contact Address", widget: "string" }
+          - { name: "contactPhone", label: "Contact Phone", widget: "string" }
+          - { name: "contactEmail", label: "Contact Email", widget: "string" }
