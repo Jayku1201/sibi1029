@@ -1,0 +1,66 @@
+{
+  "hero": {
+    "title": "BUILD DEPTH. GROW STEADY.",
+    "subtitle": "Focus on your future.",
+    "description": "A disciplined perspective for long‑term growth.",
+    "ctaText": "預約諮詢",
+    "ctaLink": "#contact"
+  },
+  "services": [
+    {
+      "icon": "rocket_launch",
+      "title": "新創落地規劃",
+      "description": "從概念到實踐，希比策略顧問 協助新創建立可執行的成長藍圖。透過商業模式設計、財務預測與資源整合，讓創意穩健落地、轉化為事業價值。"
+    },
+    {
+      "icon": "cloud_sync",
+      "title": "數位轉型輔導",
+      "description": "轉型不僅是導入技術，更是思維重塑。希比策略顧問 協助企業重新定義流程與數據架構，導入 AI、自動化 與管理系統，提升效率與決策品質。"
+    },
+    {
+      "icon": "account_balance",
+      "title": "IPO 財務顧問",
+      "description": "成長到一定規模後，治理與信任成為核心。希比策略顧問 以公開發行級標準協助企業建立財務與營運制度，為未來資本市場的信任奠基。"
+    }
+  ],
+  "growthPaths": [
+    {
+      "label": "0 → 1",
+      "title": "新創加速與落地（0→1）",
+      "description": "從創意到實踐，是策略與執行的協奏。希比策略顧問 協助設計商業模式、架構財務預測、整合團隊與資源，讓新創每一步皆可落地。",
+      "image": "assets/uploads/path-0-1.jpg"
+    },
+    {
+      "label": "1 → N",
+      "title": "中小企業數位轉型（1→N）",
+      "description": "數位化不只是導入工具，而是重塑效率與思維。希比策略顧問 協助檢視流程、導入 AI 與自動化系統，讓數據驅動成為營運核心。",
+      "image": "assets/uploads/path-1-n.jpg"
+    },
+    {
+      "label": "∞",
+      "title": "IPO 財務與營運顧問（∞）",
+      "description": "在邁向資本市場之前，先打造被信任的營運底盤。希比策略顧問 以公開發行標準導入財務制度、內控架構與治理流程，協助企業穩健成長。",
+      "image": "assets/uploads/path-infinite.jpg"
+    }
+  ],
+  "banner": {
+    "title": "穩健，是最聰明的加速。",
+    "description": "以研究與紀律築底，以節奏與回顧前進。"
+  },
+  "about": {
+    "title": "專注長期價值，構築穩健成長的基礎",
+    "description": "希比策略顧問 希比策略顧問、數位轉型與財務治理三大領域，以研究與紀律為基礎，協助決策者在變動中維持結構化的成長。我們相信，穩健，才是最聰明的加速。",
+    "quote": "以紀律為基礎、以洞察為方向、以信任為連結。",
+    "metrics": [
+      { "value": "50+", "label": "中小企業數位轉型" },
+      { "value": "20+", "label": "新創資源整合落地" },
+      { "value": "5+", "label": "IPO 財務顧問與輔導" }
+    ]
+  },
+  "contact": {
+    "title": "聯絡我們",
+    "description": "留下您的想法，我們將以 Email 回覆。",
+    "submitText": "送出",
+    "privacyNote": "提交表示同意僅用於一次性聯繫，我們不做行銷寄送、不另行分享資料。"
+  }
+}
