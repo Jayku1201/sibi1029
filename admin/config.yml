@@ -3,7 +3,7 @@ backend:
   repo: Jayku1201/sibi1029
 branch: postgres-support
 media_folder: "public/uploads"
-public_folder:"/uploads"
+public_folder: "/uploads"
 collections:
   - name: "home"
     label: "Home Page"
