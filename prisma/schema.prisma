@@ -8,10 +8,10 @@ datasource db {
 
 generator client {
   provider = "prisma-client-js"
-  previewFeatures = ["jsonNulls"]
+
 }
 
-model Setting {
+model Set {
   id                 String   @id @default(uuid())
   siteTitle          String
   logoImageId        String?  @unique
