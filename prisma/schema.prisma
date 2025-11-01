@@ -1,35 +1,80 @@
+// Prisma schema for sibi-advisory-site
+// Data source and generator
+datasource db {
+  provider   = "postgresql"
+  url        = env("DATABASE_URL")
+  directUrl  = env("DIRECT_URL")
+}
+
 generator client {
   provider = "prisma-client-js"
+  previewFeatures = ["jsonNulls"]
 }
 
-datasource db {
-  provider = "sqlite"
-  url      = "file:dev.db"
+model Setting {
+  id                 String   @id @default(uuid())
+  siteTitle          String
+  logoImageId        String?  @unique
+  contactNotifyEmails String   // comma-separated list of emails
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  logoImage          Image?   @relation(fields: [logoImageId], references: [id])
 }
 
-model User {
-  id           Int      @id @default(autoincrement())
-  name         String
-  email        String   @unique
-  passwordHash String
-  role         String   @default("admin")
-  createdAt    DateTime @default(now())
+model NavLink {
+  id       String @id @default(uuid())
+  label    String
+  href     String
+  external Boolean @default(false)
+  order    Int     @default(0)
+  visible  Boolean @default(true)
 }
 
-model ContentBlock {
-  id        Int      @id @default(autoincrement())
-  section   String
-  fieldKey  String
-  content   Json
+model SocialLink {
+  id      String @id @default(uuid())
+  platform String
+  url     String
+  order   Int     @default(0)
+  visible Boolean @default(true)
+}
+
+model Image {
+  id        String   @id @default(uuid())
+  bucket    String
+  path      String
+  alt       String?
+  width     Int?
+  height    Int?
+  createdAt DateTime @default(now())
+
+  pages     Page[]   @relation("PageHeroImage")
+}
+
+model Page {
+  id        String   @id @default(uuid())
+  slug      String   @unique
+  title     String
+  blocks    Json
+  heroImageId String?  // optional hero image for the page
+  published Boolean @default(true)
   updatedAt DateTime @updatedAt
 
-  @@unique([section, fieldKey], name: "section_fieldKey")
+  heroImage Image?   @relation("PageHeroImage", fields: [heroImageId], references: [id])
 }
 
-model ContactMessage {
-  id        Int      @id @default(autoincrement())
+model ContactSubmission {
+  id        String   @id @default(uuid())
   name      String
+  company   String?
   email     String
   message   String
   createdAt DateTime @default(now())
+}
+
+model Admin {
+  id           String   @id @default(uuid())
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
 }

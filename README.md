@@ -1,85 +1,43 @@
-# SiBi Strategic Advisory CMS
+# sibi-advisory-site
 
-This project upgrades the original static website into a Next.js driven CMS with an integrated admin dashboard.
+這是一個使用 Next.js 14、Prisma 和 Supabase 建立的企業網站範例，所有內容（文字、圖片、導覽連結、社群連結、Logo、聯絡表單通知）都可由管理後台 `/admin` 編輯。
 
-## Getting Started
+## 特點
 
-1. Install dependencies and generate the Prisma client:
+- **Next.js 14**：使用 App Router 架構及 TypeScript，支援動態 API。
+- **Prisma + PostgreSQL**：採用 Supabase 的免費 PostgreSQL 方案，支援 JSONB 儲存區塊內容。
+- **Supabase Storage**：圖片上傳至 `media` bucket，自動生成公開 URL。
+- **Tailwind CSS**：快速實作響應式設計。
+- **管理者後台**：簡易密碼登入即可修改網站所有區塊與圖片，調整導覽列、社群連結。
+
+## 使用方式
+
+1. 複製本專案並安裝依賴：
 
    ```bash
    npm install
-   npm run prisma:generate
    ```
 
-2. Apply database migrations (SQLite by default) and seed initial content:
+2. 建立 `.env` 檔案，根據 `.env.example` 填入 Supabase 及資料庫連線資訊、管理者密碼與通知 Email。
+3. 生成 Prisma client 並佈署資料庫結構：
 
    ```bash
+   npx prisma generate
    npx prisma migrate deploy
-   npm run prisma:seed
    ```
 
-3. Start the development server:
+4. 啟動開發伺服器：
 
    ```bash
    npm run dev
    ```
 
-   The website is available at `http://localhost:3000` and the admin dashboard at `http://localhost:3000/admin`.
+5. 訪問 http://localhost:3000 查看網站，後台位於 http://localhost:3000/admin 。
 
-## Environment Variables
+## 部署
 
-Copy `.env.example` to `.env` and adjust as needed.
+建議使用 Vercel + Supabase：
 
-- `DATABASE_URL` – Prisma database connection string.
-- `JWT_SECRET` – Secret for signing authentication tokens.
-- `ADMIN_PASSWORD` – Seed password for the default admin user.
-
-## Features
-
-- Editable hero, about, services, metrics, and contact sections.
-- JWT-secured admin dashboard with card-based editing and toast notifications.
-- Markdown support for service descriptions.
-- Contact form that stores submissions in the database.
-- API endpoints for `/api/v1/content`, `/api/v1/auth`, and `/api/v1/contact`.
-
-## Continuous Deployment
-
-This repository ships with a GitHub Actions workflow that builds the application and
-publishes a production-ready Docker image to the GitHub Container Registry whenever
-you push to `main`.
-
-1. In your GitHub repository settings, add a `DATABASE_URL` secret that points to your
-   production database (for example, a managed PostgreSQL instance).
-2. Optionally add `ADMIN_PASSWORD` and `JWT_SECRET` secrets so the container starts
-   with the desired credentials.
-3. Push to `main` or run the `Deploy` workflow manually. The resulting container image
-   will be tagged as `ghcr.io/<owner>/<repo>:main`.
-4. Deploy that image to your preferred platform (Render, Fly.io, AWS ECS, etc.) using
-   the sample configuration below.
-
-### Example Render blueprint
-
-```yaml
-services:
-  - type: web
-    name: sibi-advisory
-    env: docker
-    plan: starter
-    dockerfilePath: Dockerfile
-    envVars:
-      - key: DATABASE_URL
-        sync: false
-      - key: JWT_SECRET
-        sync: false
-      - key: ADMIN_PASSWORD
-        sync: false
-```
-
-After the Render service is connected to your GitHub repository, each successful run of
-the `Deploy` workflow will refresh the live container. A typical production endpoint
-would look like `https://sibi-advisory.onrender.com/` once the Render service is live.
-
-## Versioning
-
-The project follows semantic versioning. See [`CHANGELOG.md`](./CHANGELOG.md) for a
-history of notable changes. The current release is **v1.1.0**.
+1. 在 Supabase 建立專案與 `media` 存儲桶，設定 `anon` 及 `service_role` 金鑰。
+2. 在 Vercel 建立新專案，連接 GitHub 倉庫，並於環境變數中設定 `DATABASE_URL`、`DIRECT_URL`、`SUPABASE_URL`、`SUPABASE_ANON_KEY`、`SUPABASE_SERVICE_ROLE_KEY`、`NEXT_PUBLIC_SUPABASE_URL`、`NEXT_PUBLIC_SUPABASE_ANON_KEY`、`ADMIN_PASSWORD`、`JWT_SECRET`、`CONTACT_NOTIFY_EMAILS`。
+3. 部署完成後綁定自己的網域。
